@@ -34,6 +34,34 @@
     </form>
   </div>
 
+  <div>
+    <h2>Form Submit</h2>
+    <form action="http://www.google.com" method="get">
+      <!--Not the correct way to label inputs-->
+      <label>
+        Email:
+        <input type="email" name="useremail" value="Email Here">
+      </label>
+      <label>
+        Password:
+        <input type="password" name="password" placeholder="Password">
+      </label>
+      <input type="submit">
+    </form>
+  </div>
+
+  <div>
+    <h2>Form Required Validation</h2>
+    <form>
+      <!--The correct way to label inputs-->
+      <label for="userinputrequired">Required Field:</label>
+      <input type="text" id="userinputrequired"name="input" placeholder="Enter Text Here" required>
+      <label for="userinputnotrequired">Not Required Field:</label>
+      <input type="text" id="userinputnotrequired"name="input" placeholder="Enter Text Here">
+      <input type="submit">
+    </form>
+  </div>
+
 </body>
 
 </html>
