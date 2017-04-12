@@ -62,6 +62,31 @@
     </form>
   </div>
 
+  <div>
+    <h1>Hotel Feedback Form</h1>
+        <form method="get">
+          <h3>Are you from inside the USA or outside?</h3>
+
+          <label for="inside">Location:</label>
+          <input type="radio" id="inside" name="loc_choice" value="inside">
+
+          <label for="outside">Outside:</label>
+          <input type="radio" id="outside" name= "loc_choice" value="outside">
+
+          <p>How was your service?</p>
+          <select name="stars">
+            <option value="3">Great</option>
+            <option value="2">Okey</option>
+            <option value="1">Bad</option>
+          </select>
+
+          <p>Any other Feedback?</p>
+          <textarea name="name" rows="8" cols="80"></textarea>
+
+          <input type="submit" name="" value="Submit Feedback">
+        </form>
+  </div>
+
 </body>
 
 </html>
