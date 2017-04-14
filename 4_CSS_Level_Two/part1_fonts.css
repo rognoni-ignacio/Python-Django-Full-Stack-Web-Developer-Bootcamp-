@@ -4,7 +4,13 @@ h1{
 }
 
 p{
-  font-family: monospace;
+  /*font-family: monospace;*/
+
+  /*font-family: 'Barrio', cursive;*/
+
+  font-family: 'AlexBrushRegular';
+  font-weight: normal;
+  font-style: normal;
 }
 
 body{
