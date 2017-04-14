@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+</head>
+
+<body>
+
+  <h1>Forms</h1>
+
+  <div>
+    <h2>Log In Form</h2>
+    <p>Input your email and password</p>
+    <form>
+      <input type="email" name="user_email" value="Email here">
+      <input type="password" name="user_password" value="">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div>
+    <h2>Chose a Color Form</h2>
+    <form>
+      <input type="color" name="color" value="">
+    </form>
+  </div>
+
+  <div>
+    <h2>Free Text Form</h2>
+    <form>
+      <input type="text" name="text" value="Input text here">
+    </form>
+  </div>
+
+  <div>
+    <h2>Form Submit</h2>
+    <form action="http://www.google.com" method="get">
+      <!--Not the correct way to label inputs-->
+      <label>
+        Email:
+        <input type="email" name="useremail" value="Email Here">
+      </label>
+      <label>
+        Password:
+        <input type="password" name="password" placeholder="Password">
+      </label>
+      <input type="submit">
+    </form>
+  </div>
+
+  <div>
+    <h2>Form Required Validation</h2>
+    <form>
+      <!--The correct way to label inputs-->
+      <label for="userinputrequired">Required Field:</label>
+      <input type="text" id="userinputrequired"name="input" placeholder="Enter Text Here" required>
+      <label for="userinputnotrequired">Not Required Field:</label>
+      <input type="text" id="userinputnotrequired"name="input" placeholder="Enter Text Here">
+      <input type="submit">
+    </form>
+  </div>
+
+  <div>
+    <h1>Hotel Feedback Form</h1>
+        <form method="get">
+          <h3>Are you from inside the USA or outside?</h3>
+
+          <label for="inside">Location:</label>
+          <input type="radio" id="inside" name="loc_choice" value="inside">
+
+          <label for="outside">Outside:</label>
+          <input type="radio" id="outside" name= "loc_choice" value="outside">
+
+          <p>How was your service?</p>
+          <select name="stars">
+            <option value="3">Great</option>
+            <option value="2">Okey</option>
+            <option value="1">Bad</option>
+          </select>
+
+          <p>Any other Feedback?</p>
+          <textarea name="name" rows="8" cols="80"></textarea>
+
+          <input type="submit" name="" value="Submit Feedback">
+        </form>
+  </div>
+
+</body>
+
+</html>

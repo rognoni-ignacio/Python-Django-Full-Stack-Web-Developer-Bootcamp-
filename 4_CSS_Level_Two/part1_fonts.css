@@ -1,0 +1,27 @@
+h1{
+  font-family: 'Arial';
+  text-align: center;
+}
+
+p{
+  /*font-family: monospace;*/
+
+  /*font-family: 'Barrio', cursive;*/
+
+  font-family: 'AlexBrushRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-size: 20px;
+}
+
+/*em equals to the current font size of the document*/
+/*in this case, 1em = 20px, so 2em = 40px;*/
+/*it's the way to set fonts for responsive views*/
+
+#two{
+  font-size: 2.0em;
+  /*font-size: 1.0em;*/
+}

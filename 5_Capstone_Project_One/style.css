@@ -1,0 +1,27 @@
+body{
+  font-family: 'Dosis', sans-serif;
+  background-color: #011627;
+  color: white;
+  text-align: center;
+  border: 30px solid #2EC486;
+  border-top: 0px;
+  margin: 0px;
+}
+
+p {
+  padding: 5% 20% 0% 20%;
+}
+
+.signup-form {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#signup-btn{
+  background-color: #F4EC95;
+  height: 50px;
+  width: 150px;
+  font-size: 1em;
+  border-radius: 30px;
+  margin-top: 20px;
+}
