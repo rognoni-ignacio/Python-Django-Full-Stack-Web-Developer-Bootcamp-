@@ -1,0 +1,34 @@
+h1 {
+  text-align: center;
+  font-family: 'UnifrakturCook', cursive;
+}
+
+.spectrum-table{
+  margin: auto;
+}
+
+td{
+  width: 100px;
+  height: 300px;
+  border: 5px solid white;
+}
+
+#first-element{
+  background-color: #247BA0;
+}
+
+#second-element{
+  background-color: #70C1B3;
+}
+
+#third-element{
+  background-color: #B2DBBF;
+}
+
+#fourth-element{
+  background-color: #F3FFBD;
+}
+
+#fifth-element{
+  background-color: #FF1654;
+}
