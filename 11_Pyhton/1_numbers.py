@@ -25,8 +25,9 @@
 # Throughout this course we will be mainly working with
 # integers or simple float number types.
 
-
 # Now let's start with some basic arithmetic.
+
+import decimal
 
 # Basic Arithmetic
 # Addition
@@ -122,7 +123,7 @@ my_income = 100
 
 tax_rate = 0.1
 
-my_taxes = my_income*tax_rate
+my_taxes = my_income * tax_rate
 
 # Show my taxes!
 print(my_taxes)
