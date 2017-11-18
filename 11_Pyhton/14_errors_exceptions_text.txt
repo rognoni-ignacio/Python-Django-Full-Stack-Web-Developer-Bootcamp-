@@ -1,0 +1,1 @@
+Write a new line in the text file
