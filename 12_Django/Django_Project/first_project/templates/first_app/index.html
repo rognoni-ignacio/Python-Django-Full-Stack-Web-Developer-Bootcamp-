@@ -1,19 +1,35 @@
-<!DOCTYPE html>
-{% load staticfiles %}
+<!DOCTYPE html> {% load staticfiles %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>First App</title>
-    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link rel="stylesheet" href="{% static " css/style.css " %}"/>
 </head>
-<body>
-    <h1>Hello! This is index.html</h1>
-    {{ insert_me }}
 
-    <div>
-        <img src="{% static "images/logo.jpg" %}" alt="The logo didn't show">
+<body>
+    <h1>Hi, welcome to Django Level Two!</h1>
+    <h2>Here are your access records:</h2>
+    <div class="djangotwo">
+        {% if access_records %}
+        <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Date Accessed</th>
+            </thead>
+            {% for access in access_records %}
+            <tr>
+                <td>{{access.name}}</td>
+                <td>{{access.date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No access records found!</p>
+        {% endif %}
     </div>
 </body>
+
 </html>
