@@ -1,0 +1,29 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Second App - Users</title>
+</head>
+
+<body>
+    <h1>This is the users list</h1>
+    {% if users_list %}
+        <ol>
+        {% for user in users_list %}
+            <li>User Info</li>
+            <ul>
+                <li>First Name: {{user.first_name}}</li>
+                <li>Last Name: {{ user.last_name }}</li>
+                <li>Email: {{ user.email }}</li>
+            </ul>
+        {%endfor%}
+        </ol>
+    {% else %}
+        <p>There are no users</p>
+    {% endif %}
+</body>
+
+</html>
