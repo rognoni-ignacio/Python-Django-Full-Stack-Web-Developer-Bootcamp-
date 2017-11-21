@@ -1,0 +1,41 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Model Form Exercise</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Coming Soon! Suscribe to our page for more news</h1>
+        <form method="POST">
+            {% csrf_token %} {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+    <br>
+    <div class="container">
+        <h2>This are the users that are already suscribed to the page</h2>
+        {% if users_list %}
+        <ol>
+            {% for user in users_list %}
+            <li>User Info</li>
+            <ul>
+                <li>First Name: {{user.first_name}}</li>
+                <li>Last Name: {{ user.last_name }}</li>
+                <li>Email: {{ user.email }}</li>
+            </ul>
+            {%endfor%}
+        </ol>
+        {% else %}
+        <p>There are no users</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
