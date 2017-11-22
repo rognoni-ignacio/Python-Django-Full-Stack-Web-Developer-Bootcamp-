@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Django Level Four Code Examples</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="navbar-brand" href="{% url 'index' %}">Index</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="{% url 'first_app:other' %}">Other</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="{% url 'first_app:relative' %}">Relative</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="{% url 'admin:index' %}">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% block body %} {% endblock %}
+    </div>
+</body>
+
+</html>

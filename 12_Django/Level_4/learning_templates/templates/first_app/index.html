@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+
+{% block body %}
+
+{% load custom_templatetags%}
+
+<h1>Welcome to Index Page</h1>
+<h3>{{text|upper}}</h3>
+<h3>{{integer|add:"99"}}</h3>
+<h3>{{text|custom_cut:'world'}}</h3>
+
+{% endblock %}
