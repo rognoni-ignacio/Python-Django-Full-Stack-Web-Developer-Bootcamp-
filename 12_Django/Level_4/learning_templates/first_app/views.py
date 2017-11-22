@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'first_app/index.html')
+    my_dictionary = {'text': 'hello world', 'integer': 100}
+    return render(request, 'first_app/index.html', context=my_dictionary)
 
 
 def other(request):
