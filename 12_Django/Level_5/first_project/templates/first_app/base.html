@@ -23,6 +23,15 @@
                 <li>
                     <a href="{% url 'first_app:register' %}" class="navbar-link">Register</a>
                 </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'logout' %}" class="navbar-link">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url 'first_app:user-login' %}" class="navbar-link">Login</a>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </nav>
