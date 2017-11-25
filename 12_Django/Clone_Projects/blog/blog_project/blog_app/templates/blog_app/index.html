@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Index page</h1>
+    {% if posts %}
+        {% for post in posts %}
+            {{post.name}}
+        {% endfor %}
+    {% else %}
+        <h2>No posts available</h2>
+    {% endif %}
+{% endblock content %}
