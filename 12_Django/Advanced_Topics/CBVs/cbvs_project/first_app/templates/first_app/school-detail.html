@@ -13,4 +13,9 @@
     {% endfor %}
 </div>
 
+<div class="container">
+    <p><a href="{% url 'first_app:school-update' pk=school_detail.pk %}">Update</a></p>
+    <p><a href="{% url 'first_app:school-delete' pk=school_detail.pk %}">Delete</a></p>
+</div>
+
 {% endblock content %}
