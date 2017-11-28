@@ -26,7 +26,7 @@ class Post(models.Model):
         self.save()
 
     def approve_comments(self):
-        return self.comments.filter(approved_comments=True)
+        return self.comments.filter(approved_comment=True)
 
     def get_absolute_url(self):
         return reverse("post_detail", kwargs={'pk': self.pk})

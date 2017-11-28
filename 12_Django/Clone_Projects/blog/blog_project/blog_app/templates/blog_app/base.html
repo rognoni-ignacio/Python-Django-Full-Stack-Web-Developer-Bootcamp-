@@ -1,0 +1,65 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog - Clone Project</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css"
+        media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default techfont">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="{% url 'post_list'%}" class="custom-navbar-brand">Blog</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">About</a>
+            </li>
+            <li>
+                <a href="https://github.com">GitHub</a>
+            </li>
+            <li>
+                <a href="https://linkedin.com">LinkedIn</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'post_new' %}">New Post</a>
+            </li>
+            <li>
+                <a href="{% url 'post_draft_list' %}">Drafts</a>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">Logout</a>
+            </li>
+            <li>
+                <a>Welcome {{user.username}}</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+
+    {% block extra_js %}
+    {% endblock extra_js %}
+</body>
+
+</html>
