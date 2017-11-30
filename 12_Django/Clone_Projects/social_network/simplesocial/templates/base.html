@@ -1,14 +1,64 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Social Network</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Google Font API -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="{% static 'simplesocial/css/master.css' %}">
 </head>
+
 <body>
-    {% block content %}
-    
-    {% endblock content %}
+
+    <nav class="navbar mynav" role="navigation" id="navbar">
+        <div class="container">
+            <a class="navbar-brand mynav" href="{% url 'home' %}">Star Social</a>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="#">Post</a>
+                </li>
+                <li>
+                    <a href="#">Groups</a>
+                </li>
+                <li>
+                    <a href="#">Create Groups</a>
+                </li>
+                <li>
+                    <a href="{% url 'accounts:logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="">Groups</a>
+                </li>
+                <li>
+                    <a href="{% url 'accounts:login' %}">Login</a>
+                </li>
+                <li>
+                    <a href="{% url 'accounts:signup' %}">Sign Up</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mycontent">
+        {% block content %} {% endblock content %}
+    </div>
+
 </body>
+
 </html>
